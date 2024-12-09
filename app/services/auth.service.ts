@@ -12,7 +12,7 @@ const AuthService = {
   login: ({ username, password }: ILogin) => {
     return api
       .post(
-        `/auth/login`,
+        `http://localhost:8080/api/auth/login`,
         { username, password }
       )
   },

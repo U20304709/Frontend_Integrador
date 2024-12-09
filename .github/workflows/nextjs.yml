@@ -28,7 +28,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      NEXT_PUBLIC_BACKEND_API_DEV_URL: "https://inventory-master.azurewebsites.net/api"
+      #NEXT_PUBLIC_BACKEND_API_DEV_URL: "https://inventory-master.azurewebsites.net/api"
+      NEXT_PUBLIC_BACKEND_API_DEV_URL: "http://localhost:8080/api/"      
     steps:
       - name: Checkout
         uses: actions/checkout@v3

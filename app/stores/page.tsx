@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React, { useState, useEffect } from 'react';
 import EditStore from './EditStore';
 import StoreList from './StoreList';
@@ -7,10 +7,8 @@ import StoreService from '../services/store.service';
 import IStoreType from '../types/storeType.type';
 import ShowModalBtn from '../components/ShowModalBtn';
 import ViewStorePage from './ViewStorePage';
-import { useSearchParams } from 'next/navigation'
 import SearchField from './SearchField';
 import { useUserContext } from '../context/user';
-
 
 const initialState: IStore = {
   name: "",
@@ -22,7 +20,6 @@ const initialState: IStore = {
 };
 
 const Page = () => {
-  const searchParams = useSearchParams();
   const [stores, setStores] = useState<IStore[]>([]);
   const { user } = useUserContext() || { user: undefined };
   const [storesToShow, setStoresToShow] = useState<IStore[]>([]);
@@ -35,44 +32,49 @@ const Page = () => {
   const [filterParams, setFilterParams] = useState({});
   const [typeList, setTypeList] = useState<IStoreType[]>([]);
 
-  // TODO frontend filtering
+  // Extract 'store' parameter from the URL
+  const inViewStore = (() => {
+    if (typeof window !== 'undefined') {
+      const searchParams = new URLSearchParams(window.location.search);
+      return searchParams.get('store');
+    }
+    return null;
+  })();
 
   useEffect(() => {
-    setLoading(true)
+    setLoading(true);
     const fetchStores = async () => {
       try {
         const response = await StoreService.getFilteredStores(filterParams);
         setStores(response.data);
-        const newTypelist = response.data.map((store: IStore) => store.type);
-        (typeList.length < newTypelist.length) && setTypeList(newTypelist);
-        setError('')
+        const newTypeList = response.data.map((store: IStore) => store.type);
+        if (typeList.length < newTypeList.length) setTypeList(newTypeList);
+        setError('');
       } catch (error: any) {
         const errMsg = error.response?.data?.message ? error.response.data.message : 'Unable to fetch stores';
         setError(errMsg);
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
-    }
+    };
 
-    fetchStores()
+    fetchStores();
   }, [filterParams, typeList.length]);
 
   useEffect(() => {
-    if (showMyStores && !(user?.admin)) {
+    if (showMyStores && !user?.admin) {
       setStoresToShow(user?.stores || []);
     } else {
-      setStoresToShow(stores)
+      setStoresToShow(stores);
     }
-  }, [showMyStores, user, stores])
+  }, [showMyStores, user, stores]);
 
   const deleteStore = async (id: number) => {
     try {
       await StoreService.deleteStore(id);
-      setStores((stores) => {
-        return stores.filter((store: IStore) => store.id !== id);
-      });
+      setStores((stores) => stores.filter((store: IStore) => store.id !== id));
       displayNotification('Store deleted successfully');
-      setError('')
+      setError('');
     } catch (error: any) {
       const errMsg = error.response?.data?.message ? error.response.data.message : 'Unable to delete store';
       setError(errMsg);
@@ -81,7 +83,6 @@ const Page = () => {
 
   const displayNotification = (message: string) => {
     setNotification(message);
-    // Automatically hide the notification after 5 seconds (5000 milliseconds)
     setTimeout(() => {
       setNotification('');
     }, 5000);
@@ -90,79 +91,73 @@ const Page = () => {
   const handleUpdateStore = async (store: IStore) => {
     try {
       if (store.id) {
-        const updatedStore = await StoreService.updateStore(store.id, store)
-        setStores((stores) => {
-          return stores.map((store: IStore) => {
-            if (store.id === updatedStore.data.id) {
-              return updatedStore.data;
-            }
-            return store;
-          })
-        })
+        const updatedStore = await StoreService.updateStore(store.id, store);
+        setStores((stores) =>
+          stores.map((s: IStore) => (s.id === updatedStore.data.id ? updatedStore.data : s))
+        );
         displayNotification('Store updated successfully');
-
       } else {
-        const createdStore = await StoreService.createStore(store)
-        setStores((stores) => {
-          return [...stores, createdStore.data]
-        })
+        const createdStore = await StoreService.createStore(store);
+        setStores((stores) => [...stores, createdStore.data]);
         displayNotification('Store added successfully');
       }
-
-      setError('')
+      setError('');
     } catch (error: any) {
       const errMsg = error.response?.data?.message ? error.response.data.message : 'Unable to update store';
       setError(errMsg);
     }
 
-    // clean up
-    toggleModal()
+    toggleModal();
     setStoreToUpdate(initialState);
-  }
+  };
 
   const editStore = (store: IStore) => {
     setStoreToUpdate(store);
-    toggleModal()
+    toggleModal();
   };
 
   const toggleModal = () => {
-    setEditMode((editMode) => {
-      const newState = !editMode;
-      if (!newState) setStoreToUpdate(initialState)
-      return newState
-    })
-  }
+    setEditMode((prev) => !prev);
+    if (!editMode) setStoreToUpdate(initialState);
+  };
 
   const toggleShowMyStores = () => {
     if (showMyStores) {
-      setShowMyStores(false)
-      setStoresToShow(stores)
+      setShowMyStores(false);
+      setStoresToShow(stores);
     } else {
-      setStoresToShow(user?.stores || [])
-      setShowMyStores(true)
+      setStoresToShow(user?.stores || []);
+      setShowMyStores(true);
     }
-  }
+  };
 
   // Display personalized store page if store name param is present
-  const inViewStore = searchParams.get('store')
   if (inViewStore) {
-    const store = stores.find(store => store.name == inViewStore)
-    const storeWithId = user?.stores?.find(s => s.id == store?.id)
-    return <ViewStorePage store={store} isMyStore={storeWithId !== undefined} />
+    const store = stores.find((store) => store.name === inViewStore);
+    const storeWithId = user?.stores?.find((s) => s.id === store?.id);
+    return <ViewStorePage store={store} isMyStore={!!storeWithId} />;
   }
 
   // Display all stores page if no store name param is present
   return (
     <div>
-      {notification && <div onClick={() => setNotification('')} className='toast toast-end toast-bottom z-50'><div className="alert alert-info text-white p-2">{notification}</div></div>}
+      {notification && (
+        <div onClick={() => setNotification('')} className="toast toast-end toast-bottom z-50">
+          <div className="alert alert-info text-white p-2">{notification}</div>
+        </div>
+      )}
       {error && <div className="alert alert-danger mb-2">{error}</div>}
       {loading && <div className="loading loading-bars loading-lg mb-2"></div>}
       <div>
-        {user?.admin &&
-          <ShowModalBtn text="Add Store" toggleModal={toggleModal} style="btn-accent" />}
+        {user?.admin && (
+          <ShowModalBtn text="Add Store" toggleModal={toggleModal} style="btn-accent" />
+        )}
         <SearchField typeList={typeList} filterParams={filterParams} setFilterParams={setFilterParams} />
-        {!(user?.admin) &&
-          <button onClick={toggleShowMyStores} className='btn btn-xs btn-primary'>{showMyStores ? 'Show All Stores' : 'Show My Stores'}</button>}
+        {!user?.admin && (
+          <button onClick={toggleShowMyStores} className="btn btn-xs btn-primary">
+            {showMyStores ? 'Show All Stores' : 'Show My Stores'}
+          </button>
+        )}
       </div>
 
       <StoreList stores={storesToShow} editStore={editStore} deleteStore={deleteStore} />
