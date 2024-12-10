@@ -115,7 +115,7 @@ const Page = () => {
       {notification && <div onClick={() => setNotification('')} className='z-50 toast toast-end toast-bottom'><div className="alert alert-info text-white p-2">{notification}</div></div>}
       {error && <div className="alert alert-danger mb-2">{error}</div>}
       {loading && <div className="block loading loading-bars loading-lg mb-2"></div>}
-      <ShowModalBtn text="Add Category" toggleModal={toggleModal} style="btn-accent" />
+      <ShowModalBtn text="Añadir Categoría" toggleModal={toggleModal} style="btn-accent" />
 
       {!loading && <CategoryList categories={categories} editCategory={editCategory} deleteCategory={deleteCategory} />}
       <EditCategory

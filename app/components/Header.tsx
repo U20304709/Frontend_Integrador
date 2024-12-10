@@ -32,7 +32,7 @@ const Header = () => {
               className={`text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75 ${pathname === '/suppliers' ? 'active' : ''}`}
               href="/suppliers"
             >
-              Suppliers
+              Proveedores
             </Link>
           </li>}
 
@@ -41,7 +41,7 @@ const Header = () => {
               className={`text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75 ${pathname === '/categories' ? 'active' : ''}`}
               href="/categories"
             >
-              Categories
+              Categorías
             </Link>
           </li>}
           <li>
@@ -49,7 +49,7 @@ const Header = () => {
               className={`text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75 ${pathname === '/items' ? 'active' : ''}`}
               href="/items"
             >
-              Items
+              Productos
             </Link>
           </li>
           <li>
@@ -57,7 +57,7 @@ const Header = () => {
               className={`text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75 ${pathname === '/stores' ? 'active' : ''}`}
               href="/stores"
             >
-              Stores
+              Tiendas
             </Link>
           </li>
           <li>
@@ -65,7 +65,7 @@ const Header = () => {
               className={`text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75 ${pathname === '/purchase-orders' ? 'active' : ''}`}
               href="/purchase-orders"
             >
-              Purchase Orders
+              Órdenes de Compra
             </Link>
           </li>
           {AuthService.isAdmin() && <li>
@@ -73,7 +73,7 @@ const Header = () => {
               className={`text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75 ${pathname === '/users' ? 'active' : ''}`}
               href="/users"
             >
-              Users
+              Usuarios
             </Link>
           </li>}
         </>}
@@ -87,7 +87,7 @@ const Header = () => {
         className="max-w-screen-xl mx-auto flex h-16 items-center gap-8 px-4 sm:px-6 lg:px-8"
       >
         <Link className={`block text-blue-600 dark:text-blue-600 ${pathname === '/' ? 'active' : ''}`} href="/">
-          <span className="sr-only">Home</span>
+          <span className="sr-only">Inicio</span>
           <svg
             className="h-8"
             viewBox="0 0 28 24"
