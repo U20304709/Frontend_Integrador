@@ -12,7 +12,7 @@ const AuthService = {
   login: ({ username, password }: ILogin) => {
     return api
       .post(
-        `http://localhost:8080/api/auth/login`,
+        `https://happy-warmth-production.up.railway.app/api/`,
         { username, password }
       )
   },

@@ -4,7 +4,7 @@ import TokenService from "./token.service";
 const API_URL = process.env.NEXT_PUBLIC_BACKEND_API_DEV_URL;
 
 const instance = axios.create({
-  baseURL: "http://localhost:8080/api/",
+  baseURL: "https://happy-warmth-production.up.railway.app/api/",
   headers: {
     "accept": "*/*",
     "Content-Type": "application/json",
