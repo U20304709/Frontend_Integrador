@@ -66,7 +66,7 @@ const AddStoreModal = ({ store, addStore, open, toggleModal }: AddStoreModalProp
       open={open}
       toggleModal={toggleModal}
       handleSubmit={handleSubmit}
-      header="Select Store"
+      header="Seleccionar Tienda"
     >
       <Select
         placeholder="Select a Store..."

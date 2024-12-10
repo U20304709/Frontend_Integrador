@@ -84,7 +84,7 @@ const AddUserModal = ({ user = initialState, toggleModal, open, addUser }: AddUs
       open={open}
       toggleModal={toggleModal}
       handleSubmit={handleSubmit}
-      header="Add User"
+      header="Añadir Usuario"
     >
       <div className="mt-8 grid grid-cols-6 gap-6">
         <div className="col-span-6 sm:col-span-3">
@@ -92,7 +92,7 @@ const AddUserModal = ({ user = initialState, toggleModal, open, addUser }: AddUs
             htmlFor="firstName"
             className="block text-sm font-medium text-gray-700"
           >
-            First Name
+            Nombres
           </label>
 
           <input
@@ -114,7 +114,7 @@ const AddUserModal = ({ user = initialState, toggleModal, open, addUser }: AddUs
             htmlFor="lastName"
             className="block text-sm font-medium text-gray-700"
           >
-            Last Name
+            Apellidos
           </label>
 
           <input
@@ -159,7 +159,7 @@ const AddUserModal = ({ user = initialState, toggleModal, open, addUser }: AddUs
             htmlFor="username"
             className="block text-sm font-medium text-gray-700"
           >
-            Username
+            Usuario
           </label>
 
           <input
@@ -181,7 +181,7 @@ const AddUserModal = ({ user = initialState, toggleModal, open, addUser }: AddUs
             htmlFor="password"
             className="block text-sm font-medium text-gray-700"
           >
-            Password
+            Contraseña
           </label>
 
           <input

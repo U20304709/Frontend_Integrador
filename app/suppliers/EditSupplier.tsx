@@ -85,7 +85,7 @@ const EditSupplier = ({ supplier = initialState, handleUpdateSupplier, open, tog
                 <Dialog.Title
                   as="h3"
                   className="text-lg font-medium leading-6 text-gray-900">
-                  Add / Update Supplier
+                  Añadir / Actualizar Proveedor
                 </Dialog.Title>
                 <div className="max-w-md max-auto">
                   <div>
@@ -93,7 +93,7 @@ const EditSupplier = ({ supplier = initialState, handleUpdateSupplier, open, tog
                       <label htmlFor="name"
                         className="block text-sm font-medium text-gray-500"
                       >
-                        Name
+                        Nombre
                       </label>
                       <input
                         type="text"
@@ -125,7 +125,7 @@ const EditSupplier = ({ supplier = initialState, handleUpdateSupplier, open, tog
                         className="block text-sm font-medium text-gray-500"
                         htmlFor="phone"
                       >
-                        Phone
+                        Teléfono
                       </label>
                       <input
                         type="text"
@@ -140,7 +140,7 @@ const EditSupplier = ({ supplier = initialState, handleUpdateSupplier, open, tog
                         className="block text-sm font-medium text-gray-500"
                         htmlFor="address"
                       >
-                        Address
+                        Dirección
                       </label>
                       <input
                         type="text"
@@ -158,7 +158,7 @@ const EditSupplier = ({ supplier = initialState, handleUpdateSupplier, open, tog
                       <button
                         onClick={toggleModal}
                         className="btn btn-error">
-                        Close
+                        Cerrar
                       </button>
                     </div>
                   </div>

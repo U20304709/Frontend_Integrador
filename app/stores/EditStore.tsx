@@ -114,7 +114,7 @@ const EditStore = ({ store = initialState, handleUpdateStore, open, toggleModal 
                 <Dialog.Title
                   as="h3"
                   className="text-lg font-medium leading-6 text-gray-900">
-                  Add / Update Store
+                  Añadir / Actualizar Tienda
                 </Dialog.Title>
                 <div className="max-w-md max-auto">
                   <div>
@@ -122,7 +122,7 @@ const EditStore = ({ store = initialState, handleUpdateStore, open, toggleModal 
                       <label htmlFor="name"
                         className="block text-sm font-medium text-gray-500"
                       >
-                        Name
+                        Nombre
                       </label>
                       <input
                         type="text"
@@ -154,7 +154,7 @@ const EditStore = ({ store = initialState, handleUpdateStore, open, toggleModal 
                         className="block text-sm font-medium text-gray-500"
                         htmlFor="phone"
                       >
-                        Phone
+                        Teléfono
                       </label>
                       <input
                         type="text"
@@ -169,7 +169,7 @@ const EditStore = ({ store = initialState, handleUpdateStore, open, toggleModal 
                         className="block text-sm font-medium text-gray-500"
                         htmlFor="address"
                       >
-                        Address
+                        Dirección
                       </label>
                       <input
                         type="text"
@@ -184,7 +184,7 @@ const EditStore = ({ store = initialState, handleUpdateStore, open, toggleModal 
                         className="block text-sm font-medium text-gray-500"
                         htmlFor="openingDate"
                       >
-                        Opening Date
+                        Fecha de Apertura
                       </label>
                       <input
                         type="date"
@@ -211,7 +211,7 @@ const EditStore = ({ store = initialState, handleUpdateStore, open, toggleModal 
                       <button
                         onClick={toggleModal}
                         className="btn btn-error">
-                        Close
+                        Cerrar
                       </button>
                     </div>
                   </div>

@@ -103,7 +103,7 @@ const EditCategory = ({ category = initialState, handleUpdateCategory, open, tog
                 <Dialog.Title
                   as="h3"
                   className="text-lg font-medium leading-6 text-gray-900">
-                  Add / Update Category
+                  Añadir / Actualizar Categoría
                 </Dialog.Title>
                 <div className="max-w-md max-auto">
                   <div>
@@ -111,7 +111,7 @@ const EditCategory = ({ category = initialState, handleUpdateCategory, open, tog
                       <label htmlFor="name"
                         className="block text-sm font-medium text-gray-500"
                       >
-                        Name
+                        Nombre
                       </label>
                       <input
                         type="text"
@@ -128,7 +128,7 @@ const EditCategory = ({ category = initialState, handleUpdateCategory, open, tog
                       <label
                         className="block text-sm font-medium text-gray-500"
                       >
-                        Supplier
+                        Proveedor
                       </label>
                       <Select
                         primaryColor={"indigo"}

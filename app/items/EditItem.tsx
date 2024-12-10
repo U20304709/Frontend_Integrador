@@ -106,7 +106,7 @@ const EditItem = ({ item = initialState, handleUpdateItem, open, toggleModal, ca
                 <Dialog.Title
                   as="h3"
                   className="text-lg font-medium leading-6 text-gray-900">
-                  Add / Update Item
+                  Añadir / Actualizar Producto
                 </Dialog.Title>
                 <div className="max-w-md max-auto">
                   <div>
@@ -114,7 +114,7 @@ const EditItem = ({ item = initialState, handleUpdateItem, open, toggleModal, ca
                       <label htmlFor="name"
                         className="block text-sm font-medium text-gray-500"
                       >
-                        Name
+                        Nombre
                       </label>
                       <input
                         type="text"
@@ -132,7 +132,7 @@ const EditItem = ({ item = initialState, handleUpdateItem, open, toggleModal, ca
                         className="block text-sm font-medium text-gray-500"
                         htmlFor="shortDescription"
                       >
-                        Short Description
+                        Descripción Corta
                       </label>
                       <input
                         type="text"
@@ -148,7 +148,7 @@ const EditItem = ({ item = initialState, handleUpdateItem, open, toggleModal, ca
                         className="block text-sm font-medium text-gray-500"
                         htmlFor="longDescription"
                       >
-                        Long Description
+                        Descripción Extensa
                       </label>
                       <input
                         type="textArea"
@@ -163,7 +163,7 @@ const EditItem = ({ item = initialState, handleUpdateItem, open, toggleModal, ca
                         className="block text-sm font-medium text-gray-500"
                         htmlFor="price"
                       >
-                        Price
+                        Precio
                       </label>
                       <input
                         type="number"
@@ -179,7 +179,7 @@ const EditItem = ({ item = initialState, handleUpdateItem, open, toggleModal, ca
                         className="block text-sm font-medium text-gray-500"
                         htmlFor="quantity"
                       >
-                        Quantity
+                        Cantidad
                       </label>
                       <input
                         type="number"
@@ -194,7 +194,7 @@ const EditItem = ({ item = initialState, handleUpdateItem, open, toggleModal, ca
                       <label
                         className="block text-sm font-medium text-gray-500"
                       >
-                        Category
+                        Categoría
                       </label>
                       <Select
                         primaryColor={"indigo"}
@@ -214,7 +214,7 @@ const EditItem = ({ item = initialState, handleUpdateItem, open, toggleModal, ca
                       <button
                         onClick={toggleModal}
                         className="btn btn-error">
-                        Close
+                        Cerrar
                       </button>
                     </div>
                   </div>

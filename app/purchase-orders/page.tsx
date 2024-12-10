@@ -173,7 +173,7 @@ const Page = () => {
           <div>
             <label className="block text-sm font-medium text-gray-500">Filtrar por Tienda</label>
             <Select
-              placeholder="Select Store..."
+              placeholder="Seleccionar Tienda..."
               value={params.store ? { value: params.store, label: params.store } : null}
               primaryColor="indigo"
               onChange={(data: any) => updateRoute({ name: 'store', value: data?.value })}
