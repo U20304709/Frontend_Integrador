@@ -43,7 +43,7 @@ const SearchField = ({ filterParams, setFilterParams, typeList }: { filterParams
             <label htmlFor="type"
               className="block text-sm font-medium text-gray-500"
             >
-              Store Type
+              Tipo de Tienda
             </label>
             <Select
               primaryColor={"indigo"}
@@ -59,7 +59,7 @@ const SearchField = ({ filterParams, setFilterParams, typeList }: { filterParams
             <label htmlFor="name"
               className="block text-sm font-medium text-gray-500"
             >
-              Store Name
+              Nombre de la Tienda
             </label>
             <input
               type="text"
@@ -74,7 +74,7 @@ const SearchField = ({ filterParams, setFilterParams, typeList }: { filterParams
             <label htmlFor="address"
               className="block text-sm font-medium text-gray-500"
             >
-              Store Address
+              Dirección de la Tienda
             </label>
             <input
               type="text"
@@ -89,7 +89,7 @@ const SearchField = ({ filterParams, setFilterParams, typeList }: { filterParams
             <label htmlFor="openingDate"
               className="block text-sm font-medium text-gray-500"
             >
-              Opening Date
+              Fecha de Apertura
             </label>
             <input
               type="date"
@@ -103,7 +103,7 @@ const SearchField = ({ filterParams, setFilterParams, typeList }: { filterParams
         </div>
 
         <div className='flex flex-col gap-2'>
-          <button onClick={handleSubmit} className="btn btn-sm btn-primary block">Search</button>
+          <button onClick={handleSubmit} className="btn btn-sm btn-primary block">Buscar</button>
           <button onClick={clearFilter} className="btn btn-sm block">Reset</button>
         </div>
       </div>

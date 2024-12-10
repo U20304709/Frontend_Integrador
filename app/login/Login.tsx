@@ -94,11 +94,11 @@ export default function Login() {
               </a>
 
               <h1 className="mt-6 text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl md:text-4xl">
-                Welcome to Inventory Master 🏆
+                Bienvenido a la Página Maestra del Sistema de Inventario
               </h1>
 
               <p className="mt-4 leading-relaxed text-gray-500 dark:text-gray-400">
-                Login to Explore 🥳.
+                Inicie Sesión para explorar.
               </p>
 
               <div
@@ -109,7 +109,7 @@ export default function Login() {
                     htmlFor="username"
                     className="block text-md font-medium text-gray-700 dark:text-gray-200"
                   >
-                    Username
+                    Usuario
                   </label>
 
                   <input
@@ -128,7 +128,7 @@ export default function Login() {
                     htmlFor="password"
                     className="block text-md font-medium text-gray-700 dark:text-gray-200"
                   >
-                    Password
+                    Contraseña
                   </label>
 
                   <input
@@ -145,16 +145,16 @@ export default function Login() {
 
                 <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
                   <button onClick={handleSubmit} className="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-md font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500 dark:hover:bg-blue-700 dark:hover:text-white">
-                    Log In
+                    Iniciar Sesión
                   </button>
 
                   <p className="mt-4 text-md text-gray-500 dark:text-gray-400 sm:mt-0">
-                    <span>Dont have an account? </span>
+                    <span>¿No tiene una cuenta? </span>
                     <Link
                       href="/signup"
                       className="text-gray-700 underline dark:text-gray-200"
                     >
-                      Sign Up
+                      Registrarse
                     </Link>
                     .
                   </p>

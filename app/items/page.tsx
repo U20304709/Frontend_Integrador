@@ -145,7 +145,7 @@ const Page = () => {
       {loading && <div className="loading loading-bars loading-lg mb-2"></div>}
       <div>
         {user?.admin &&
-          <ShowModalBtn text="Add Item" toggleModal={toggleModal} style="btn-accent" />}
+          <ShowModalBtn text="Añadir Producto" toggleModal={toggleModal} style="btn-accent" />}
         <SearchField categories={categories} filterParams={filterParams} setFilterParams={setFilterParams} />
       </div>
 

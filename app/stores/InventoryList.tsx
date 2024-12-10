@@ -7,29 +7,29 @@ import Inventory from './Inventory'
 const InventoryList = ({ inventories, updateInventories, showEdit }: any) => {
   return (
     <>
-      <p className='text-center font-semibold'>STORE INVENTORY</p>
+      <p className='text-center font-semibold'>INVENTARIO DE LA TIENDA</p>
       <div className="my-8 overflow-x-auto">
         <div className="flex shadow border-b">
           <table className="min-w-full table">
             <thead className="bg-gray-50">
               <tr>
                 <th className="text-left font-medium text-gray-500 uppercase tracking-wide py-3 px-2">
-                  ITEM
+                  PRODUCTO
                 </th>
                 <th className="text-left font-medium text-gray-500 uppercase tracking-wide py-3 px-2">
-                  PRICE
+                  PRECIO
                 </th>
                 <th className="text-left font-medium text-gray-500 uppercase tracking-wide py-3 px-2">
-                  QUANTITY
+                  CANTIDAD
                 </th>
                 <th className="text-left font-medium text-gray-500 uppercase tracking-wide py-3 px-2">
-                  CATEGORY
+                  CATEGORÍA
                 </th>
                 <th className="text-left font-medium text-gray-500 uppercase tracking-wide py-3 px-2">
-                  THRESHOLD
+                  UMBRAL
                 </th>
                 <th className="text-left font-medium text-gray-500 uppercase tracking-wide py-3 px-2">
-                  LAST UPDATED
+                  ÚLTIMA ACTUALIZACIÓN
                 </th>
                 <th className="text-left font-medium text-gray-500 uppercase tracking-wide py-3 px-2"></th>
               </tr>

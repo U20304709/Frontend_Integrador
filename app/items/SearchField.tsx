@@ -45,7 +45,7 @@ const SearchField = ({ filterParams, setFilterParams, categories }: any) => {
           <label htmlFor="name"
             className="block text-sm font-medium text-gray-500"
           >
-            Item Name
+            Nombre del Producto
           </label>
           <input
             type="text"
@@ -61,7 +61,7 @@ const SearchField = ({ filterParams, setFilterParams, categories }: any) => {
           <label htmlFor="description"
             className="block text-sm font-medium text-gray-500"
           >
-            Item Description
+            Descripción del Producto
           </label>
           <input
             type="text"
@@ -79,7 +79,7 @@ const SearchField = ({ filterParams, setFilterParams, categories }: any) => {
           <label htmlFor="minQuantity"
             className="block text-sm font-medium text-gray-500"
           >
-            Min Quantity
+            Cantidad Mín.
           </label>
           <input
             type="number"
@@ -95,7 +95,7 @@ const SearchField = ({ filterParams, setFilterParams, categories }: any) => {
           <label htmlFor="maxQuantity"
             className="block text-sm font-medium text-gray-500"
           >
-            Max Quantity
+            Cantidad Máx.
           </label>
           <input
             type="number"
@@ -112,7 +112,7 @@ const SearchField = ({ filterParams, setFilterParams, categories }: any) => {
           <label htmlFor="minPrice"
             className="block text-sm font-medium text-gray-500"
           >
-            Min Price
+            Precio Mín.
           </label>
           <input
             type="number"
@@ -127,7 +127,7 @@ const SearchField = ({ filterParams, setFilterParams, categories }: any) => {
           <label htmlFor="maxPrice"
             className="block text-sm font-medium text-gray-500"
           >
-            Max Price
+            Precio Máx.
           </label>
           <input
             type="number"
@@ -141,14 +141,14 @@ const SearchField = ({ filterParams, setFilterParams, categories }: any) => {
       </div>
       <div className='flex flex-col gap-2'>
         <div className='flex gap-2 justify-end mt-5'>
-          <button onClick={handleSubmit} className="btn btn-md btn-primary">Search</button>
+          <button onClick={handleSubmit} className="btn btn-md btn-primary">buscar</button>
           <button onClick={clearFilter} className="btn btn-md">Reset</button>
         </div>
         <div>
           <label htmlFor="categoryName"
             className="block text-sm font-medium text-gray-500"
           >
-            Category Name
+            Nombre de la Categoría
           </label>
           <Select
             primaryColor={"indigo"}

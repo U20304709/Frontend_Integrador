@@ -168,10 +168,10 @@ const Page = () => {
         </div>
       )}
       <div className="flex justify-between">
-        <ShowModalBtn text="Create Store Order" toggleModal={toggleNewPOModal} style="btn-accent" />
+        <ShowModalBtn text="Crear Órden de Tienda" toggleModal={toggleNewPOModal} style="btn-accent" />
         <div className="flex gap-3 items-end">
           <div>
-            <label className="block text-sm font-medium text-gray-500">Filter by Store</label>
+            <label className="block text-sm font-medium text-gray-500">Filtrar por Tienda</label>
             <Select
               placeholder="Select Store..."
               value={params.store ? { value: params.store, label: params.store } : null}
@@ -181,7 +181,7 @@ const Page = () => {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-500">Filter by Status</label>
+            <label className="block text-sm font-medium text-gray-500">Filtrar por Estado</label>
             <Select
               placeholder="Select Status..."
               value={params.status ? { value: params.status, label: params.status } : null}

@@ -120,7 +120,7 @@ const Page = () => {
       {error && <div className="alert alert-danger mb-2">{error}</div>}
       {loading && <div className="loading loading-bars loading-lg mb-2"></div>}
       {!loading && <>
-        <ShowModalBtn text="Add Supplier" toggleModal={toggleModal} style="btn-accent" />
+        <ShowModalBtn text="Añadir Proveedor" toggleModal={toggleModal} style="btn-accent" />
         <SupplierList suppliers={suppliers} editSupplier={editSupplier} deleteSupplier={deleteSupplier} />
       </>}
       <EditSupplier

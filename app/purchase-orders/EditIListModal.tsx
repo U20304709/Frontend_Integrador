@@ -131,7 +131,7 @@ const EditIListModal: React.FC<EditIListModalProps> = ({
         </div>
         <div className='mt-1'>
           <div className='mt-2'>
-            <label className='block text-sm font-medium text-gray-700'>Add Items to Order</label>
+            <label className='block text-sm font-medium text-gray-700'>Añadir Productos a la Orden</label>
             <Select
               placeholder="Select an Item"
               value={purchaseOrderItem?.item ? { value: JSON.stringify(purchaseOrderItem.item), label: purchaseOrderItem.item?.name } : null}
@@ -158,7 +158,7 @@ const EditIListModal: React.FC<EditIListModalProps> = ({
               />
               {errors.quantity && <div className="text-xs alert-danger text-error">{errors.quantity}</div>}
             </div>
-            <button onClick={addPOI} className='mt-4 mb-10 btn btn-accent'>ADD ITEM</button>
+            <button onClick={addPOI} className='mt-4 mb-10 btn btn-accent'>AÑADIR PRODUCTO</button>
           </div>
         </div>
 

@@ -55,33 +55,33 @@ export default function Home() {
     <main>
       {loading && <div className="block loading loading-bars loading-lg mb-2"></div>}
       <h1 className="my-6 text-1xl text-center font-bold text-gray-900 sm:text-1xl md:text-2xl">
-        Welcome to Inventory Master Home 🏆
+        Bienvenido a la Página Maestra del Sistema de Inventario
       </h1>
       <div className='mx-auto flex flex-col gap-10 bg-gray-100 p-10 pt-5 pb-20 rounded-xl shadow-xl'>
         <h4 className="text-md text-center font-semibold text-grey-600 sm:text-md md:text-lg">
-          Our Stats
+          Estadísticas
         </h4>
         {error && <div className="alert alert-danger mb-2">{error}</div>}
         <div className="stats stats-vertical lg:stats-horizontal shadow">
           <Link href="/stores" className='link cursor-pointer hover:text-blue-500'>
             <div className="stat">
-              <div className="stat-title text-center">Total Stores</div>
+              <div className="stat-title text-center">Tiendas Totales</div>
               <div className="stat-value text-center">{stats.totalStores}</div>
             </div>
           </Link>
           <div className="stat">
-            <div className="stat-title text-center">Total Inventories</div>
+            <div className="stat-title text-center">Inventarios Totales</div>
             <div className="stat-value text-center">{stats.totalInventories}</div>
           </div>
           <Link href="/items" className='link cursor-pointer hover:text-blue-500'>
             <div className="stat">
-              <div className="stat-title text-center">Total Items</div>
+              <div className="stat-title text-center">Productos Totales</div>
               <div className="stat-value text-center">{stats.totalItems}</div>
             </div>
           </Link>
           <Link href="/purchase-orders" className='link cursor-pointer hover:text-blue-500'>
             <div className="stat">
-              <div className="stat-title text-center">Total Purchase Orders</div>
+              <div className="stat-title text-center">Órdenes de Compra Totales</div>
               <div className="stat-value text-center">{stats.totalPurchaseOrders}</div>
             </div>
           </Link>
@@ -89,7 +89,7 @@ export default function Home() {
 
         <div className="stats max-w-sm shadow bg-red-400 mx-auto">
           <div className="stat">
-            <div className="stat-title text-center">Inventories at Threshold</div>
+            <div className="stat-title text-center">Inventarios en Umbral</div>
             <div className="stat-value text-center">{stats.inventoriesAtThreshold}</div>
           </div>
         </div>
@@ -98,42 +98,42 @@ export default function Home() {
             <div className="stat">
               <div className="text-center flex flex-col text-black">
                 <span>
-                  Most Popular
+                  Más Populares
                 </span>
                 <span>
-                  In Purchase Order
+                  en Órdenes de Compra
                 </span>
               </div>
               <div className="mt-2 stat-value flex flex-col text-sm text-white font-normal">
                 <span>
-                  Item: {stats.mostPopularItemInPurchaseOrders.name}
+                  Producto: {stats.mostPopularItemInPurchaseOrders.name}
                 </span>
                 <span>
-                  Category: {stats.mostPopularItemInPurchaseOrders.category?.name}
+                  Categoría: {stats.mostPopularItemInPurchaseOrders.category?.name}
                 </span>
                 <span>
-                  Supplier: {stats.mostPopularItemInPurchaseOrders.category?.supplier?.name}
+                  Proveedor: {stats.mostPopularItemInPurchaseOrders.category?.supplier?.name}
                 </span>
               </div>
             </div>
             <div className="stat">
               <div className="text-center flex flex-col text-black">
                 <span>
-                  Most Popular
+                  Más Populares
                 </span>
                 <span>
-                  In Inventory
+                  en Inventario
                 </span>
               </div>
               <div className="mt-2 stat-value flex flex-col text-sm text-white font-normal">
                 <span>
-                  Item: {stats.mostPopularItemInInventory.name}
+                  Producto: {stats.mostPopularItemInInventory.name}
                 </span>
                 <span>
-                  Category: {stats.mostPopularItemInInventory.category?.name}
+                  Categoría: {stats.mostPopularItemInInventory.category?.name}
                 </span>
                 <span>
-                  Supplier: {stats.mostPopularItemInInventory.category?.supplier?.name}
+                  Proveedor: {stats.mostPopularItemInInventory.category?.supplier?.name}
                 </span>
               </div>
             </div>
@@ -145,10 +145,10 @@ export default function Home() {
               <div className="stat bg-red-400">
                 <div className="stat-title text-center flex flex-col">
                   <span>
-                    Pending
+                    Órdenes de Compra
                   </span>
                   <span>
-                    Purchase Orders
+                    Pendientes
                   </span>
                 </div>
                 <div className="stat-value text-center">{stats.pendingPurchaseOrders}</div>
@@ -159,10 +159,10 @@ export default function Home() {
               <div className="stat">
                 <div className="stat-title text-center flex flex-col">
                   <span>
-                    Delivered
+                    Órdenes de Compra
                   </span>
                   <span>
-                    Purchase Orders
+                    Entregados
                   </span>
                 </div>
                 <div className="stat-value text-center">{stats.deliveredPurchaseOrders}</div>

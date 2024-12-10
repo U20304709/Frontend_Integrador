@@ -155,10 +155,10 @@ const ViewStorePage = ({ store, isMyStore = false }: { store: IStore | undefined
                 <div className="stat p-2 bg-red-400">
                   <div className="stat-title text-center flex flex-col text-xs p-0">
                     <span>
-                      Pending
+                      Órdenes de Compra
                     </span>
                     <span>
-                      Purchase Orders
+                      Pendientes
                     </span>
                   </div>
                   <div className="stat-value text-center text-md font-normal p-0">{stats.pendingPurchaseOrderCount}</div>
@@ -167,7 +167,7 @@ const ViewStorePage = ({ store, isMyStore = false }: { store: IStore | undefined
               <div className="stat p-2">
                 <div className="stat-title text-center flex flex-col text-xs p-0">
                   <span>
-                    Total Worth
+                    Monto Total
                   </span>
                 </div>
                 <div className="stat-value text-center text-md font-normal p-0">{convertNumToPrice(stats.totalStoreWorth)}</div>
@@ -177,10 +177,10 @@ const ViewStorePage = ({ store, isMyStore = false }: { store: IStore | undefined
               <div onClick={() => setShowInvAtThreshold(true)} className="stat p-2 bg-red-400">
                 <div className="stat-title text-center flex flex-col text-xs p-0">
                   <span>
-                    Inventories
+                    Inventarios
                   </span>
                   <span>
-                    At Threshold
+                    en Umbral
                   </span>
                 </div>
                 <div className="stat-value text-center text-md font-normal p-0">{stats.inventoriesAtThresholdCount}</div>
@@ -188,7 +188,7 @@ const ViewStorePage = ({ store, isMyStore = false }: { store: IStore | undefined
               <div className="stat p-2">
                 <div className="stat-title text-center flex flex-col text-xs p-0">
                   <span>
-                    Total Items
+                    Productos Totales
                   </span>
                 </div>
                 <div className="stat-value text-center text-md font-normal p-0">{stats.totalItemsInInventory}</div>

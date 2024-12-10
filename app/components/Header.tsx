@@ -141,7 +141,7 @@ const Header = () => {
                           .join(' ')}</li>
                       ))}
                     </div>
-                    <li onClick={handleLogout} className="btn btn-ghost">Logout</li>
+                    <li onClick={handleLogout} className="btn btn-ghost">Salir</li>
                   </ul>
                 </div>
               </>}

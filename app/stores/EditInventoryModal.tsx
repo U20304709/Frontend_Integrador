@@ -61,7 +61,7 @@ const EditInventoryModal = ({ inventory, updateInventory, open, toggleModal }: E
             <label htmlFor="quantity"
               className="block text-sm font-medium text-gray-500"
             >
-              Quantity
+              Cantidad
             </label>
             <input
               className="input input-bordered w-full max-w-xs"
@@ -77,7 +77,7 @@ const EditInventoryModal = ({ inventory, updateInventory, open, toggleModal }: E
             <label htmlFor="threshold"
               className="block text-sm font-medium text-gray-500"
             >
-              Threshold
+              Umbral
             </label>
             <input
               className="input input-bordered w-full max-w-xs"

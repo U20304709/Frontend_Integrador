@@ -150,7 +150,7 @@ const Page = () => {
       {loading && <div className="loading loading-bars loading-lg mb-2"></div>}
       <div>
         {user?.admin && (
-          <ShowModalBtn text="Add Store" toggleModal={toggleModal} style="btn-accent" />
+          <ShowModalBtn text="Añadir Tienda" toggleModal={toggleModal} style="btn-accent" />
         )}
         <SearchField typeList={typeList} filterParams={filterParams} setFilterParams={setFilterParams} />
         {!user?.admin && (

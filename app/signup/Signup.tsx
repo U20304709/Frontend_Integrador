@@ -114,11 +114,11 @@ export default function Signup() {
               </a>
 
               <h1 className="mt-6 text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl md:text-4xl">
-                Welcome to Inventory Master 🏆
+              Bienvenido a la Página Maestra del Sistema de Inventario
               </h1>
 
               <p className="mt-4 leading-relaxed text-gray-500 dark:text-gray-400">
-                Register to become an Admin
+                Regístrese para convertirse en Administrador
               </p>
 
               <div className="mt-8 grid grid-cols-6 gap-6">
@@ -127,7 +127,7 @@ export default function Signup() {
                     htmlFor="firstName"
                     className="block text-sm font-medium text-gray-700 dark:text-gray-200"
                   >
-                    First Name
+                    Nombres
                   </label>
 
                   <input
@@ -146,7 +146,7 @@ export default function Signup() {
                     htmlFor="lastName"
                     className="block text-sm font-medium text-gray-700 dark:text-gray-200"
                   >
-                    Last Name
+                    Apellidos
                   </label>
 
                   <input
@@ -184,7 +184,7 @@ export default function Signup() {
                     htmlFor="username"
                     className="block text-sm font-medium text-gray-700 dark:text-gray-200"
                   >
-                    Username
+                    Usuario
                   </label>
 
                   <input
@@ -203,7 +203,7 @@ export default function Signup() {
                     htmlFor="password"
                     className="block text-sm font-medium text-gray-700 dark:text-gray-200"
                   >
-                    Password
+                    Contraseña
                   </label>
 
                   <input
@@ -219,16 +219,16 @@ export default function Signup() {
 
                 <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
                   <button onClick={handleSubmit} className="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-md font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500 dark:hover:bg-blue-700 dark:hover:text-white">
-                    Create an account
+                    Registrarse
                   </button>
 
                   <p className="mt-4 text-md text-gray-500 dark:text-gray-400 sm:mt-0">
-                    <span>Already have an account? </span>
+                    <span>¿Tienes una cuenta?</span>
                     <Link
                       href="/login"
                       className="text-gray-700 underline dark:text-gray-200"
                     >
-                      Log in
+                      Iniciar Sesión
                     </Link>
                     .
                   </p>

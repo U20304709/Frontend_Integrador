@@ -85,7 +85,7 @@ const Page = () => {
       {error && <div className="alert alert-danger mb-2">{error}</div>}
       {notification && <div onClick={() => setNotification('')} className='toast toast-end toast-bottom z-50'><div className="alert alert-info text-white p-2">{notification}</div></div>}
 
-      <ShowModalBtn text="Create New User" toggleModal={toggleNewUserModal} style="btn-accent" />
+      <ShowModalBtn text="Crear Nuevo Usuario" toggleModal={toggleNewUserModal} style="btn-accent" />
 
       <AddUserModal
         open={newUserModalOpen}
